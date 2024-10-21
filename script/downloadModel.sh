@@ -3,6 +3,7 @@
 clear 
 echo "download models ... "
 
+source activate base
 conda activate flux-comfyUI-mac-setup-script
 
 # flux1 dev fp8
