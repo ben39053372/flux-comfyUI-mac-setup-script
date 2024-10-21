@@ -3,6 +3,8 @@
 clear 
 echo "download models ... "
 
+conda activate flux-comfyUI-mac-setup-script
+
 # flux1 dev fp8
 if [ ! -e ComfyUI/models/checkpoints/flux1-dev-fp8.safetensors ]
 then
@@ -54,5 +56,6 @@ then
   echo "git clone ComfyUI-GGUF custome_nodes"
   (cd ComfyUI/custom_nodes && git clone https://github.com/city96/ComfyUI-GGUF.git && cd ComfyUI-GGUF && pip install -r requirements.txt)
 else
+  (cd ComfyUI/custom_nodes/ComfyUI-GGUF && pip install -r requirements.txt)
   echo "SKIP: clone ComfyUI-GGUF"
 fi

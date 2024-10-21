@@ -14,7 +14,7 @@ echo $name
 # create env 
 conda create --name $name 
 
-source activate $name
+conda activate flux-comfyUI-mac-setup-script
 
 clear
 
