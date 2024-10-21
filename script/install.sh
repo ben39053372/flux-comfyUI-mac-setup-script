@@ -41,6 +41,7 @@ then
   git clone https://github.com/comfyanonymous/ComfyUI.git
 else
   echo "==== already clone ComfyUI ! ===="
+  (cd ComfyUI && git pull)
 fi
 
 echo "install ComfyUI package"
