@@ -10,7 +10,7 @@ conda activate flux-comfyUI-mac-setup-script
 if [ ! -e ComfyUI/models/checkpoints/flux1-dev-fp8.safetensors ]
 then
   echo "download flux1-dev-fp8.safetensors to ComfyUI/models/checkpoints" 
-  (cd ComfyUI/models/checkpoints && curl -L -O https://huggingface.co/XLabs-AI/flux-dev-fp8/resolve/main/flux-dev-fp8.safetensors)
+  (cd ComfyUI/models/checkpoints && curl -L -O https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors)
 else
   echo "SKIP: download flux1-dev-fp8.safetensors"
 fi
