@@ -51,6 +51,15 @@ else
   echo "SKIP: download clip_l.safetensors "
 fi
 
+# install ComfyUI-Manager
+if [ ! -e ComfyUI/custom_nodes/comfyui-manager ]
+then
+  echo "git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager"
+  (cd ComfyUI/custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager )
+else 
+  echo "SKIP: clone ComfyUI-manager"
+fi
+
 # install gguf custom_nodes
 if [ ! -e ComfyUI/custom_nodes/ComfyUI-GGUF ]
 then
@@ -60,3 +69,4 @@ else
   (cd ComfyUI/custom_nodes/ComfyUI-GGUF && pip install -r requirements.txt)
   echo "SKIP: clone ComfyUI-GGUF"
 fi
+
